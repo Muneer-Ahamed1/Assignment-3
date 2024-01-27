@@ -4,10 +4,12 @@ const axios = require('axios');
 const app = express();
 
 app.use(express.json());
-app.use(cors({
-  origin: 'http://localhost:5173', // Replace with the actual origin of your client
-  credentials: true, // Allow credentials (e.g., cookies, HTTP authentication)
-}));
+const corsOptions = {
+  origin: true, // Allows all origins
+};
+
+app.use(cors(corsOptions));
+
 app.post('/getAllValidation', async (req, res) => {
   console.log(req.body);
   const { token, instance_url } = req.body;
