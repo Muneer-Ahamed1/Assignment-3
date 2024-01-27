@@ -7,8 +7,6 @@ const headers = {
 
 
 
-//   try {
-//     console.log(loginData);
 
 //     const { token, instance_url } = loginData;
 //     headers['Authorization'] = `Bearer ${token}`;
